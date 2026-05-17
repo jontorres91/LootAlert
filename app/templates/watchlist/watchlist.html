@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}Watchlist - LootAlert{% endblock %}
+
+{% block content %}
+    <h2>Your Watchlist</h2>
+    <p>Keep track of your favorite items and receive alerts on price changes.</p>
+     <ul>
+        <li><strong>Item 1:</strong> Price: $10.00 - Alert: On</li>
+        <li><strong>Item 2:</strong> Price: $20.00 - Alert: Off</li>
+        <li><strong>Item 3:</strong> Price: $15.00 - Alert: On</li>
+    </ul>
+    <p>Use the navigation above to add or remove items from your watchlist.</p>
+    {%- for item in watchlist -%}
+        <div class="watchlist-item">
+            <h3>{{ item.name }}</h3>
+            <p>Current Price: {{ item.current_price }}</p>
+            <p>Desired Price: {{ item.desired_price }}</p>
+            <p>Status: {{ item.status }}</p>
+        </div>
+    {%- else -%}
+        <p>Your watchlist is empty. Start adding items to track their price drops!</p>
+    {%- endfor -%}
+{% endblock %}
