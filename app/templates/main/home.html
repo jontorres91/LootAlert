@@ -3,11 +3,57 @@
 {% block title %}Home - LootAlert{% endblock %}
 
 {% block content %}
-    <h2>Welcome to LootAlert!</h2>
-    <p>Your one-stop solution for tracking game price drops to loot.</p>
-    <p>Use the navigation above to explore our features:</p>
-    <ul>
-        <li><strong>Login:</strong> Access your personalized dashboard and watchlist.</li>
-        <li><strong>Watchlist:</strong> Keep track of your favorite items and receive alerts on price changes.</li>
-    </ul>
+<div class="container py-5">
+
+    <!-- Hero Section -->
+    <div class="p-5 mb-4 bg-light rounded-3">
+        <div class="container-fluid py-5">
+            <h2>Welcome to LootAlert!</h2>
+            <p>Your one-stop solution for tracking game price drops to loot.</p>
+
+            <ul>
+                <li><strong>Login:</strong> Access your personalized dashboard and watchlist.</li>
+                <li><strong>Watchlist:</strong> Keep track of your favorite items and receive alerts on price changes.</li>
+            </ul>
+
+            <a href="{{ url_for('auth.login') }}" class="btn btn-primary btn-lg">Register</a>
+        </div>
+    </div>
+
+    <!-- Cards Section -->
+    <div class="row g-4">
+
+        <div class="col-md-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Newest Deals</h5>
+                    <p class="card-text">Here you can find a list of the most recent deals.</p>
+                    <a href="#" class="btn btn-primary">New Deals</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Track Prices</h5>
+                    <p class="card-text">Monitor price changes for your favorite items.</p>
+                    <a href="#" class="btn btn-primary">Track Items</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Latest Game News!</h5>
+                    <p class="card-text">Stay updated with the latest news from the gaming world.</p>
+                    <a href="#" class="btn btn-primary">View News</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
 {% endblock %}
