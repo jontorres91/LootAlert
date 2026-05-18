@@ -3,18 +3,50 @@
 {% block title %}Login - LootAlert{% endblock %}
 
 {% block content %}
-    <h2>Login to LootAlert</h2>
-    <p>Sign in to access your personalized dashboard and watchlist.</p>
-    <form method="POST">
-        <div>
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
+<div class="container py-5">
+
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+
+            <h2 class="mb-3 text-center">Login to LootAlert</h2>
+            <p class="text-center mb-4">
+                Sign in to access your personalized dashboard and watchlist.
+            </p>
+
+            <form method="POST">
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email address</label>
+                    <input 
+                        type="email" 
+                        class="form-control" 
+                        id="email" 
+                        name="email" 
+                        required
+                    >
+                </div>
+
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input 
+                        type="password" 
+                        class="form-control" 
+                        id="password" 
+                        name="password" 
+                        required
+                    >
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100">
+                    Login
+                </button>
+            </form>
+
+            <p class="text-center mt-3">
+                Don't have an account? <a href="#">Register</a>
+            </p>
+
         </div>
-        <div>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-        </div>
-        <button type="submit">Login</button>
-    </form>
+    </div>
+
+</div>
 {% endblock %}
-  
